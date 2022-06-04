@@ -16,38 +16,43 @@ export const CrudV: FC<TCrud>= ({
     return (
         <div style={{ width: '80%', margin: 'auto', padding: '20px 0px'}}>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label>
-                        id
-                    </label>
-                    <input
-                        name='id'
-                        value={id}
-                        onChange={handleInputChange}
-                    />
+                <div style={{ display: 'flex', padding: '20px 0px'}}>
+                    <div className="input-group" style={{ padding: '0px 5px'}}>
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="">Id</span>
+                        </div>
+                        <input
+                            className="form-control"
+                            name='id'
+                            value={id}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                    <div className="input-group" style={{ padding: '0px 5px'}}>
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="">Name</span>
+                        </div>
+                        <input
+                            className="form-control"
+                            name='name'
+                            value={name}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                    <div className="input-group" style={{ padding: '0px 5px'}}>
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="">Phone</span>
+                        </div>
+                        <input
+                            className="form-control"
+                            name='phone'
+                            value={phone}
+                            onChange={handleInputChange}
+                        />
+                    </div>
                 </div>
-
-                <div>
-                    <label>
-                        Name
-                    </label>
-                    <input
-                        name='name'
-                        value={name}
-                        onChange={handleInputChange}
-                    />
-                </div>
-
-                <div>
-                    <label>
-                        Phone
-                    </label>
-                    <input
-                        name='phone'
-                        value={phone}
-                        onChange={handleInputChange}
-                    />
-                </div>
+                
+                
                 <button type='submit'  className='btn btn-primary'>Guardar</button>
             </form>
             <table className="table table-striped">
